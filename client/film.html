@@ -1,0 +1,12 @@
+<template name="itemFilm">
+    <div class="post">
+        <div class="post-content">
+            <h3><a href="{{url}}">{{title}}</a></h3>
+            <p>
+                <a href="{{pathFor 'filmEdit'}}">Modifier</a>
+            </p>
+            <img src="{{image}}" alt="">
+        </div>
+        <a href="{{pathFor 'filmPage'}}" class="discuss btn btn-default">Voir le film</a>
+    </div>
+</template>
