@@ -15,8 +15,9 @@ Template.filmSubmit.events({
             note: $(e.target).find('[name=note]').val(),
             description: $(e.target).find('[name=description]').val(),
             acteurs: $(e.target).find('[name=acteurs]').val(),
-            image: document.getElementById("image").files[0].name
+            image: $(e.target).find('img').attr('src')
         };
+        console.log(film.image)
 
         Meteor.call('postInsert', film, function(error, result) {
             // affiche l'erreur à l'utilisateur et s'interrompt
@@ -71,11 +72,15 @@ Template.filmSubmit.helpers({
 
 Template.filmSubmit.onCreated(function () {
     this.currentUpload = new ReactiveVar(false);
+    this.uploadedImage = new ReactiveVar(false);
 });
 
 Template.filmSubmit.helpers({
     currentUpload: function () {
         return Template.instance().currentUpload.get();
+    },
+    uploadedImage: function () {
+        return Template.instance().uploadedImage.get();
     }
 });
 
@@ -96,15 +101,18 @@ Template.filmSubmit.events({
                     template.currentUpload.set(this);
                 });
 
+                uploadInstance.on('afterUpload', function (fileRef) {
+                    template.uploadedImage.set(fileRef);
+                });
+
                 uploadInstance.on('end', function(error, fileObj) {
                     if (error) {
                         window.alert('Error during upload: ' + error.reason);
                     } else {
-                        window.alert('File "' + fileObj.name + '" successfully uploaded');
+                        template.uploadedImage.set(fileObj);
                     }
                     template.currentUpload.set(false);
                 });
-
                 uploadInstance.start();
             }
         }

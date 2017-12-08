@@ -12,15 +12,12 @@
         {{else}}
         <input id="fileInput" type="file" />
         {{/with}}
-        {{#if uploadedFiles.count}}
-        <ul>
-            {{#each file in uploadedFiles.each}}
-            <li>
-                <img src="{{file.link}}" alt="">
-                <!-- <a href="{{file.link}}?download=true" download="{{file.name}}">{{file.name}}</a>-->
-            </li>
-            {{/each}}
-        </ul>
+
+        {{#if uploadedImage}}
+        <li>
+            <img src="{{uploadedImage._downloadRoute}}/{{uploadedImage._collectionName}}/{{uploadedImage._id}}/original/{{uploadedImage._id}}{{uploadedImage.extensionWithDot}}" alt="">
+            <!-- <a href="{{file.link}}?download=true" download="{{file.name}}">{{file.name}}</a>-->
+        </li>
         {{else}}
         <div>No files uploaded, yet</div>
         {{/if}}
