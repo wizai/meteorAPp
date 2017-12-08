@@ -4,15 +4,6 @@ $(document).ready(function(){
 })
 
 
-// FULLPAGE JS
-$(document).ready(function() {
-	$('#fullpage').fullpage({
-		
-	});
-});
-
-
-
 
 // TYPED.JS
 document.addEventListener('DOMContentLoaded', function() {

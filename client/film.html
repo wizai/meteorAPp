@@ -1,14 +1,16 @@
 <template name="itemFilm">
     <div class="post">
-    <div class="post-content">
-        <a href="{{pathFor 'filmEdit'}}">
-            <img src="{{image}}" alt="">
-            <h3><a href="{{url}}">{{title}}</a></h3>
 
-            <p class="genre">{{genre}}</p>
-            <p class="note">{{note}}</p>
-            <p>{{description}}</p>
-            <p>{{acteurs}}</p>
+        <div class="post-content">
+            <a href="{{pathFor 'filmEdit'}}">
+
+                <div class="img-container">
+                    <img src="{{image}}" alt="">
+                </div>
+
+                <h3><a href="{{url}}">{{title}}</a></h3>
+
+                <p class="note">{{note}}/10</p>
 
             <a href="{{pathFor 'filmPage'}}" class="discuss btn btn-default">Voir le film</a>
         </a>

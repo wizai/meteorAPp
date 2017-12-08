@@ -1,0 +1,33 @@
+.not-found{
+  text-align: center;
+  padding-top: 10vh;
+  h2{
+    font-size: 20vw;
+    font-weight: bold;
+    line-height: 330px;
+    color: #1a1a1a;
+  }
+  p{
+    font-size: 30px;
+    font-weight: bold;
+  }
+  a{
+    margin-top: 5vh;
+    background-color: #ff4a2c;
+    border: none;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 30px;
+    font-size: 20px;
+    text-transform: initial;
+    padding: 10px 30px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0px 3px 10px #ff4a2c;
+    &:hover{
+      background-color: #ffffff;
+      color: #ff4a2c;
+    }
+  }
+}
+

@@ -1,42 +1,76 @@
 <template name="filmSubmit">
     <form class="main form page">
-        <div class="form-group">
-            <label class="control-label" for="url">URL</label>
-            <div class="controls">
-                <input name="url" id="url" type="text" value="" placeholder="Votre URL" class="form-control"/>
+        <div class="form-groupAdd">
+            <div class="containerInput">
+                <div class="groupInput">
+                    <label class="control-label" for="title">Title</label>
+                    <input name="title" id="title" type="text" value=""/>
+                </div>
             </div>
-        </div>
-        {{#with currentUpload}}
-        Uploading <b>{{file.name}}</b>:
-        <span id="progress">{{progress.get}}%</span>
-        {{else}}
-        <input id="fileInput" type="file" />
-        {{/with}}
-
-        {{#if uploadedImage}}
-        <li>
-            <img src="{{uploadedImage._downloadRoute}}/{{uploadedImage._collectionName}}/{{uploadedImage._id}}/original/{{uploadedImage._id}}{{uploadedImage.extensionWithDot}}" alt="">
-            <!-- <a href="{{file.link}}?download=true" download="{{file.name}}">{{file.name}}</a>-->
-        </li>
-        {{else}}
-        <div>No files uploaded, yet</div>
-        {{/if}}
-
-        <div class="form-group">
-            <label class="control-label" for="title">Title</label>
-            <div class="controls">
-                <input name="title" id="title" type="text" value="" placeholder="Nommez votre article" class="form-control"/>
+            <div class="containerInput">
+                <div class="doubleInput">
+                    <div class="groupInput">
+                        <label for="date">Date</label>
+                        <input type="date" id="date" value="">
+                    </div>
+                </div>
+                <div class="doubleInput">
+                    <div class="groupInput">
+                        <label for="note">Note / 10</label>
+                        <input type="number" name="note" id="note" max="10" min="0" value="" >
+                    </div>
+                </div>
             </div>
-        </div>
-        <label for="genre">genre</label>
-        <input type="text" name="genre" id="genre">
-        <label for="description">description</label>
-        <textarea name="description" id="description" cols="30" rows="10"></textarea>
-        <label for="acteurs">acteurs</label>
-        <input type="text" name="acteurs" id="acteurs">
-        <label for="note">Note</label>
-        <input type="number" name="note" id="note">
-        <hr>
+            <div class="containerInput">
+                <div class="doubleInput">
+                    <div class="groupInput">
+                        <label for="genre">Categorie</label>
+                        <input type="text" name="genre" id="genre" value="" >
+                    </div>
+                </div>
+                <div class="doubleInput">
+                    <div class="groupInput">
+                        <label for="couleur">Couleur</label>
+                        <input type="text" name="couleur" id="couleur" value="">
+                    </div>
+                </div>
+            </div>
+            <div class="containerInput">
+                <div class="groupInput">
+                    <label for="acteurs">Acteurs</label>
+                    <input type="text" name="acteurs" id="acteurs" value="" >
+                </div>
+            </div>
+            <div class="containerInput">
+                <div class="groupInput">
+                    <label for="description">Description</label>
+                    <textarea name="description" id="description" cols="30" rows="10" ></textarea>
+                </div>
+            </div>
+            <div class="containerInput">
+                <div class="groupInput">
+                    <label for="url">Lien du trailer</label>
+                    <input name="url" id="url" type="text" value=""  class="form-control"/>
+                </div>
+            </div>
+            <div class="containerInput">
+                <div class="groupInput">
+                    {{#with currentUpload}}
+                        Uploading <b>{{file.name}}</b>:
+                        <span id="progress">{{progress.get}}%</span>
+                        {{else}}
+                        <label for="fileInput">Image</label>
+                        <input id="fileInput" type="file" value="" />
+                    {{/with}}
+
+                    {{#if uploadedImage}}
+                        <img src="{{uploadedImage._downloadRoute}}/{{uploadedImage._collectionName}}/{{uploadedImage._id}}/original/{{uploadedImage._id}}{{uploadedImage.extensionWithDot}}" alt="">
+                    {{else}}
+                        <div>No files uploaded, yet</div>
+                    {{/if}}
+                </div>
+            </div>
         <input type="submit" value="Submit" class="btn btn-primary"/>
+        </div>
     </form>
 </template>

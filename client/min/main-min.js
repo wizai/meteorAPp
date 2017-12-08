@@ -1,0 +1,1 @@
+$(".form-groupAdd input").focus(function(){$(this).parents(".groupInput").addClass("focused")}),$(".form-groupAdd input").blur(function(){var s=$(this).val();""==s?($(this).removeClass("filled"),$(this).parents(".groupInput").removeClass("focused")):$(this).addClass("filled")});

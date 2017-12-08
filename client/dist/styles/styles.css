@@ -417,14 +417,107 @@ header h1 {
   display: flex; }
 
 .post-content {
-  text-align: center; }
-  .post-content img {
+  text-align: center;
+  width: 100%;
+  max-width: 250px; }
+  .post-content .img-container {
     width: 100%;
     max-width: 200px;
-    border-radius: 5px; }
+    height: 400px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .post-content .img-container img {
+      width: 100%; }
   .post-content h3 {
     padding: 30px 0 10px;
     font-size: 2em; }
+
+.not-found {
+  text-align: center;
+  padding-top: 10vh; }
+  .not-found h2 {
+    font-size: 20vw;
+    font-weight: bold;
+    line-height: 330px;
+    color: #1a1a1a; }
+  .not-found p {
+    font-size: 30px;
+    font-weight: bold; }
+  .not-found a {
+    margin-top: 5vh;
+    background-color: #ff4a2c;
+    border: none;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 30px;
+    font-size: 20px;
+    text-transform: initial;
+    padding: 10px 30px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0px 3px 10px #ff4a2c; }
+    .not-found a:hover {
+      background-color: #ffffff;
+      color: #ff4a2c; }
+
+.form-groupAdd {
+  max-width: 600px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  justify-content: flex-start;
+  -ms-flex-pack: flex-start;
+  -webkit-flex-flow: row wrap;
+  -moz-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center; }
+  .form-groupAdd .containerInput {
+    display: block;
+    width: 100%; }
+    .form-groupAdd .containerInput .groupInput {
+      position: relative; }
+      .form-groupAdd .containerInput .groupInput + .form-group {
+        margin-top: 30px; }
+      .form-groupAdd .containerInput .groupInput.focused label {
+        transform: translateY(-125%);
+        font-size: .75em; }
+    .form-groupAdd .containerInput .doubleInput {
+      width: 50%; }
+    .form-groupAdd .containerInput label {
+      position: absolute;
+      left: 0;
+      font-size: 20px;
+      top: 10px;
+      color: #999;
+      background-color: #fff;
+      z-index: 10;
+      transition: transform 150ms ease-out, font-size 150ms ease-out; }
+    .form-groupAdd .containerInput input {
+      border: 0px;
+      font-size: 20px;
+      position: relative;
+      padding: 12px 0px 5px 0;
+      width: 100%;
+      outline: 0;
+      border: 0;
+      box-shadow: 0 1px 0 0 #7c7c7c;
+      transition: box-shadow 150ms ease-out; }
+      .form-groupAdd .containerInput input:focus {
+        box-shadow: 0 2px 0 0 #fa2525; }
+      .form-groupAdd .containerInput input.filled {
+        box-shadow: 0 2px 0 0 lightgreen; }
 
 @media screen and (max-width: 1280px) {
   #fullpage #section1 .fp-tableCell .bloc-1 {

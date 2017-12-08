@@ -15,9 +15,9 @@ Template.filmSubmit.events({
             note: $(e.target).find('[name=note]').val(),
             description: $(e.target).find('[name=description]').val(),
             acteurs: $(e.target).find('[name=acteurs]').val(),
+            couleur: $(e.target).find('[name=couleur]').val(),
             image: $(e.target).find('img').attr('src')
         };
-        console.log(film.image)
 
         Meteor.call('postInsert', film, function(error, result) {
             // affiche l'erreur à l'utilisateur et s'interrompt
@@ -25,8 +25,37 @@ Template.filmSubmit.events({
                 return alert(error.reason);
             Router.go('listFilm', {_id: result._id});
         });
+    },
+    'focus input' : function(event){
+        $(event.target).parents('.groupInput').addClass('focused');
+    },
+    'blur input' : function (event) {
+        var inputValue = $(event.target).val();
+        if (inputValue === "") {
+            $(event.target).removeClass('filled');
+            $(event.target).parents('.groupInput').removeClass('focused');
+        } else {
+            $(event.target).addClass('filled');
+        }
     }
 });
+
+if (Meteor.isClient){
+    $(function () {
+        $('.form-groupAdd input').focus(function () {
+            $(this).parents('.groupInput').addClass('focused');
+        });
+        $('.form-groupAdd input').blur(function () {
+            var inputValue = $(this).val();
+            if (inputValue === "") {
+                $(this).removeClass('filled');
+                $(this).parents('.groupInput').removeClass('focused');
+            } else {
+                $(this).addClass('filled');
+            }
+        })
+    })
+}
 
 Template.filmEdit.events({
     'submit form': function(e) {

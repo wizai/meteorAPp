@@ -11,6 +11,6 @@ strong, b {
 
 @font-face {
   font-family: 'Circular Std';
-  src: url("dist/fonts/circular/CircularStd-Black.woff") format("woff"), url("dist/fonts/circular/CircularStd-Black.ttf") format("truetype");
+  src: url("../../../dist/fonts/circular/CircularStd-Black.woff") format("woff"), url("../../../dist/fonts/circular/CircularStd-Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal; }

@@ -31,6 +31,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/client\/dist\/scripts\/min\/main-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/client\/dist\/scripts\/min\/main-min.js",
+		"outputAbbreviatedPath": "\/client\/dist\/scripts\/min\/min\/main-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/client\/dist\/styles\/base\/fonts.css": {
 		"fileType": 16,
 		"ignore": 0,
@@ -147,6 +158,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/client\/main.js",
 		"outputAbbreviatedPath": "\/client\/min\/main-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/client\/min\/main-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/client\/min\/main-min.js",
+		"outputAbbreviatedPath": "\/client\/min\/min\/main-min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -581,6 +603,15 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/client\/src\/styles\/css\/_addFilm.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/client\/src\/styles\/css\/_addFilm.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/client\/src\/styles\/css\/fonts.css": {
 		"fileType": 16,
 		"ignore": 1,
@@ -599,6 +630,22 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/client\/src\/styles\/layouts\/_addFilm.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/client\/src\/styles\/layouts\/_addFilm.scss",
+		"outputAbbreviatedPath": "\/client\/src\/styles\/css\/_addFilm.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
 	"\/client\/src\/styles\/layouts\/_home.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -608,6 +655,22 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/client\/src\/styles\/layouts\/_home.scss",
 		"outputAbbreviatedPath": "\/client\/src\/styles\/css\/_home.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/client\/src\/styles\/layouts\/_notFound.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/client\/src\/styles\/layouts\/_notFound.scss",
+		"outputAbbreviatedPath": "\/client\/src\/styles\/css\/_notFound.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,

@@ -1,0 +1,53 @@
+.form-groupAdd{
+  max-width: 600px;
+  margin:0 auto;
+  @include flexbox();
+  @include justify-content(flex-start);
+  @include flex-flow(row wrap);
+  @include align-items(center);
+  .containerInput{
+    display: block;
+    width:100%;
+    .groupInput{
+      position: relative;
+      & + .form-group {
+        margin-top: 30px;
+      }
+      &.focused label{
+        transform: translateY(-125%);
+        font-size: .75em;
+      }
+    }
+    .doubleInput{
+      width: 50%;
+    }
+    label{
+      position: absolute;
+      left: 0;
+      font-size: 20px;
+      top: 10px;
+      color: #999;
+      background-color: #fff;
+      z-index: 10;
+      transition: transform 150ms ease-out, font-size 150ms ease-out;
+    }
+    input{
+      border: 0px ;
+      font-size: 20px;
+      position: relative;
+      padding: 12px 0px 5px 0;
+      width: 100%;
+      outline: 0;
+      border: 0;
+      box-shadow: 0 1px 0 0 #7c7c7c;
+      transition: box-shadow 150ms ease-out;
+      &:focus {
+        box-shadow: 0 2px 0 0 #fa2525;
+      }
+      &.filled{
+        box-shadow: 0 2px 0 0 lightgreen;
+      }
+    }
+  }
+
+}

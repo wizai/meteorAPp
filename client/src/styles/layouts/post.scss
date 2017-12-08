@@ -4,11 +4,22 @@
 
 .post-content {
   text-align: center;
+  width: 100%;
+  max-width: 250px;
+
   
-  img {
+  .img-container {
     width: 100%;
     max-width: 200px;
+    height: 400px;
     border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 100%;
+    }
   }
 
   h3 {
