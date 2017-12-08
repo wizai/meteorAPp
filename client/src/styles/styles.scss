@@ -1,0 +1,18 @@
+@import 'base/variables';
+
+@import 'base/normalize';
+@import 'base/global';
+
+// Import Components
+@import 'components/header';
+
+// Import Layouts
+@import 'layouts/home';
+@import 'layouts/post';
+
+// Import responsive
+@import 'base/responsive';
+
+// Import Plugins
+@import 'plugins/plugin';
+

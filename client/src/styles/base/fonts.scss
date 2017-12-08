@@ -1,0 +1,24 @@
+/* ************************************ */
+/*	fonts	*/
+/* ************************************ */
+
+
+
+em, i {
+    font-family: 'titillium_web';
+    font-style: italic;
+}
+
+strong, b {
+    font-family: 'titillium_web';
+    font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Circular Std';
+  src: url('dist/fonts/circular/CircularStd-Black.woff') format('woff'),
+  url('dist/fonts/circular/CircularStd-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
