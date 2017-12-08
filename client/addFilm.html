@@ -6,7 +6,25 @@
                 <input name="url" id="url" type="text" value="" placeholder="Votre URL" class="form-control"/>
             </div>
         </div>
-        <input type="file" name="image" id="image" placeholder="Ajouter une image">
+        {{#with currentUpload}}
+        Uploading <b>{{file.name}}</b>:
+        <span id="progress">{{progress.get}}%</span>
+        {{else}}
+        <input id="fileInput" type="file" />
+        {{/with}}
+        {{#if uploadedFiles.count}}
+        <ul>
+            {{#each file in uploadedFiles.each}}
+            <li>
+                <img src="{{file.link}}" alt="">
+                <!-- <a href="{{file.link}}?download=true" download="{{file.name}}">{{file.name}}</a>-->
+            </li>
+            {{/each}}
+        </ul>
+        {{else}}
+        <div>No files uploaded, yet</div>
+        {{/if}}
+
         <div class="form-group">
             <label class="control-label" for="title">Title</label>
             <div class="controls">

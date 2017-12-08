@@ -27,4 +27,5 @@ cosio55:autoform-cloudinary
 aldeed:collection2-core@2.0.0
 ostrio:files
 lepozepo:cloudinary
+ostrio:templatehelpers
 autopublish
