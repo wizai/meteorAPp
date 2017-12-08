@@ -1,7 +1,12 @@
 <template name="listFilm">
     <div class="posts">
         {{#each film}}
-        {{> itemFilm}}
+            {{> itemFilm}}
+        {{/each}}
+        {{#each images}}
+        <li>
+            <img src="{{this.url}}" alt="thumbnail">
+        </li>
         {{/each}}
     </div>
 </template>

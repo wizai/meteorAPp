@@ -6,13 +6,22 @@
                 <input name="url" id="url" type="text" value="" placeholder="Votre URL" class="form-control"/>
             </div>
         </div>
-        <input type="file" name="image" placeholder="Ajouter une image">
+        <input type="file" name="image" id="image" placeholder="Ajouter une image">
         <div class="form-group">
             <label class="control-label" for="title">Title</label>
             <div class="controls">
                 <input name="title" id="title" type="text" value="" placeholder="Nommez votre article" class="form-control"/>
             </div>
         </div>
+        <label for="genre">genre</label>
+        <input type="text" name="genre" id="genre">
+        <label for="description">description</label>
+        <textarea name="description" id="description" cols="30" rows="10"></textarea>
+        <label for="acteurs">acteurs</label>
+        <input type="text" name="acteurs" id="acteurs">
+        <label for="note">Note</label>
+        <input type="number" name="note" id="note">
+        <hr>
         <input type="submit" value="Submit" class="btn btn-primary"/>
     </form>
 </template>

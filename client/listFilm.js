@@ -11,7 +11,11 @@ Template.filmSubmit.events({
         var film = {
             url: $(e.target).find('[name=url]').val(),
             title: $(e.target).find('[name=title]').val(),
-            image: $(e.target).find('[name=image]').val()
+            genre: $(e.target).find('[name=genre]').val(),
+            note: $(e.target).find('[name=note]').val(),
+            description: $(e.target).find('[name=description]').val(),
+            acteurs: $(e.target).find('[name=acteurs]').val(),
+            image: document.getElementById("image").files[0].name
         };
 
         Meteor.call('postInsert', film, function(error, result) {
@@ -20,7 +24,6 @@ Template.filmSubmit.events({
                 return alert(error.reason);
             Router.go('listFilm', {_id: result._id});
         });
-
     }
 });
 
@@ -40,7 +43,7 @@ Template.filmEdit.events({
                 // affiche l'erreur à l'utilisateur
                 alert(error.reason);
             } else {
-                Router.go('filmPage', {_id: currentPostId});
+                Router.go('listFilm', {_id: currentPostId});
             }
         });
     },
@@ -55,4 +58,3 @@ Template.filmEdit.events({
         }
     }
 });
-

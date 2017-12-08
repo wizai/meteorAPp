@@ -6,6 +6,7 @@
                 <input name="url" id="url" type="text" value="{{url}}" placeholder="Votre URL" class="form-control"/>
             </div>
         </div>
+        <input type="file" name="image" id="image" placeholder="Ajouter une image">
         <div class="form-group">
             <label class="control-label" for="title">Title</label>
             <div class="controls">
@@ -13,7 +14,16 @@
             </div>
         </div>
         <input type="submit" value="Submit" class="btn btn-primary submit"/>
-        <hr/>
+
+        <label for="genre">genre</label>
+        <input type="text" name="genre" id="genre">
+        <label for="description">description</label>
+        <textarea name="description" id="description" cols="30" rows="10"></textarea>
+        <label for="acteurs">acteurs</label>
+        <input type="text" name="acteurs" id="acteurs">
+        <label for="note">Note</label>
+        <input type="number" name="note" id="note">
+        <hr>
         <a class="btn btn-danger delete" href="#">Supprimer le post</a>
     </form>
 </template>
