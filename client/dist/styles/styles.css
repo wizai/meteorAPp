@@ -417,11 +417,19 @@ header h1 {
   display: flex; }
 
 .post-content {
-  text-align: center; }
-  .post-content img {
+  text-align: center;
+  width: 100%;
+  max-width: 250px; }
+  .post-content .img-container {
     width: 100%;
     max-width: 200px;
-    border-radius: 5px; }
+    height: 400px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .post-content .img-container img {
+      width: 100%; }
   .post-content h3 {
     padding: 30px 0 10px;
     font-size: 2em; }
