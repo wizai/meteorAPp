@@ -1,19 +1,15 @@
 <template name="itemFilm">
     <div class="post">
-
         <div class="post-content">
-            <a href="{{pathFor 'filmEdit'}}">
-
-                <div class="img-container">
-                    <img src="{{image}}" alt="">
+            <a href="{{pathFor 'filmPage'}}" >
+                <div class="img-container" >
+                    <img src="{{image}}" alt="" class="poster" style="-webkit-box-shadow: 0px 30px 57px 0px #{{couleur}};-moz-box-shadow: 0px 30px 57px 0px #{{couleur}};box-shadow: 0px 30px 57px 0px #{{couleur}};">
                 </div>
-
                 <h3><a href="{{url}}">{{title}}</a></h3>
-
                 <p class="note">{{note}}/10</p>
-
-            <a href="{{pathFor 'filmPage'}}" class="discuss btn btn-default">Voir le film</a>
-        </a>
+                <!--<a href="{{pathFor 'filmPage'}}" class="discuss btn btn-default">Voir le film</a>-->
+            </a>
         </div>
     </div>
 </template>
+

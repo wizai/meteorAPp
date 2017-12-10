@@ -1,0 +1,24 @@
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 100; }
+  header .logo, header .kind-list {
+    padding: 20px 50px; }
+  header h1 {
+    color: black;
+    font-size: 2em;
+    margin: 0; }
+    header h1 span {
+      color: #ff4a2c; }
+  header select {
+    border: none;
+    background: none;
+    font-family: 'Circular Std' !important;
+    border-bottom: 2px solid #d1d1d1;
+    text-transform: capitalize;
+    outline: none; }
+
+.navbar-default {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }

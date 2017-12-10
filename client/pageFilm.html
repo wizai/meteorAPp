@@ -7,14 +7,14 @@
                     <h1>{{title}}</h1>
                     <p class="note"><span>{{note}}/10</span></p>
                     <div class="categories">
-                        <p></p>
+                        <p>{{genre}}</p>
                     </div>
                     <p class="description">{{description}}</p>
                     <div class="acteurs">
-
+                        {{acteurs}}
                     </div>
                     <div class="button">
-                        <a href="{{url}}" class="trailer">Regarder le trailer</a>
+                        <a href="{{url}}" target="_blank" class="trailer">Regarder le trailer</a>
                         <a class="btn-floating btn-large red edit" href="{{pathFor 'filmEdit'}}">
                             <i class="large material-icons">mode_edit</i>
                         </a>

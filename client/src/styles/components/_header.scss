@@ -1,8 +1,37 @@
 header {
-  h1 {
-    color: $black;
-    span {
-      color: $orange;
-    }
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+
+  .logo, .kind-list {
+    padding: 20px 50px;
   }
+  a{
+    text-decoration: none !important;
+    h1 {
+      color: black;
+      font-size: 2em;
+      margin: 0;
+      span {
+        color: #ff4a2c;
+      }
+    }
+
+  }
+
+  select {
+    border: none;
+    color: black;
+    background: none;
+    font-family: 'Circular Std' !important;
+    border-bottom: 2px solid #d1d1d1;
+    text-transform: capitalize;
+    outline: none;
+  }
+}
+
+.navbar-default {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

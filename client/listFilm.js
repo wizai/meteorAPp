@@ -3,6 +3,22 @@ Template.listFilm.helpers({
         return film.find();
     }
 });
+
+Template.filmPage.rendered = function () {
+    var acteursList = $('.acteurs').text();
+    var acteur = acteursList.split(',')
+    var arrayActeur  = [];
+    var newHTML = [];
+    arrayActeur = arrayActeur.concat(acteur);
+    console.log(arrayActeur)
+    $.each( arrayActeur, function( key, value ) {
+        //alert( key + ": " + value );
+        newHTML.push('<span>' + value + '</span>');
+        //$(".acteurs").html("<span>"+ key + ": " + value + "</span>");
+        $(".acteurs").html(newHTML.join(""));
+    });
+};
+
 Template.filmSubmit.rendered = function () {
     $('select').material_select();
     $('.datepicker').pickadate({

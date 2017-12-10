@@ -1,10 +1,3 @@
-// CALLBACK
-$(document).ready(function(){
-	// alert('hello');
-})
-
-
-
 // TYPED.JS
 document.addEventListener('DOMContentLoaded', function() {
   var typed = new Typed('#typed', {

@@ -1,5 +1,5 @@
 .form-groupEdit{
-  padding-top: 120px;
+  padding-top: 100px;
   max-width: 600px;
   position: relative;
   margin:0 auto;
@@ -33,7 +33,7 @@
     justify-content: space-between;
     -ms-flex-pack: space-between;
     width:100%;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     &:first-of-type {
       .input-field {
         label {
@@ -45,7 +45,7 @@
       }
     }
     &:last-of-type{
-      margin-bottom: 10vh;
+      margin-bottom: 50px;
       .input-field{
         &.focused{
           label{
@@ -118,7 +118,10 @@
       box-shadow: none;
       font-weight: 900;
       &#description{
+        margin-top: 15px;
         padding-top: 15px;
+        min-height: 120px;
+        overflow: scroll;
       }
       &#title{
         font-size: 36px;

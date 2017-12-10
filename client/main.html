@@ -5,16 +5,12 @@
   <!-- load MUI -->
   <link href="//cdn.muicss.com/mui-0.9.30/css/mui.min.css" rel="stylesheet" type="text/css" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="//cdn.muicss.com/mui-0.9.30/js/mui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
 </head>
 
 <body>
-  <div class="add-container">
-    <button class="add">
-      <span></span>
-    </button>
-    <ul>
-      <li><a href="{{pathFor 'filmSubmit'}}">Créer un post</a></li>
-      <button class="mui-btn mui-btn--primary mui-btn--raised">My Button</button>
-    </ul>
-  </div>
+<div class="add-container">
+  <a class="btn-floating btn-large waves-effect waves-light red" href="{{pathFor 'filmSubmit'}}"><i class="material-icons">add</i></a>
+</div>
 </body>

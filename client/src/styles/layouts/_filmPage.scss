@@ -1,14 +1,9 @@
-.navbar{
-  position: absolute;
-  top: 10px;
-  left: 10px;
-}
 .container{
   max-width: inherit;
   width: 100%;
   .postContainer{
     width:100vw;
-    height:100vh;
+    height: 100vh;
     position: relative;
     display: -webkit-box;
     display: -moz-box;
@@ -66,6 +61,21 @@
         color: #7c7c7c;
         font-weight: 100;
         line-height: 30px;
+      }
+      .acteurs{
+        margin: 40px 0 50px;
+        span{
+          border-radius: 30px;
+          border: 2px solid #e2e2e2;
+          text-transform: uppercase;
+          color: #424242;
+          font-size: 12px;
+          padding: 8px 15px;
+          margin-right: 10px;
+          &:last-of-type{
+            margin-right: 0px;
+          }
+        }
       }
       .button{
         margin-top: 10px;

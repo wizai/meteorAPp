@@ -1,5 +1,5 @@
 .form-groupAdd{
-  padding-top: 120px;
+  padding-top: 100px;
   max-width: 600px;
   margin:0 auto;
   display: -webkit-box;
@@ -7,11 +7,11 @@
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  -webkit-justify-content: space-between;
-  -moz-justify-content: space-between;
-  -ms-justify-content: space-between;
-  justify-content: space-between;
-  -ms-flex-pack: space-between;
+  -webkit-justify-content: space-between center;
+  -moz-justify-content: space-between center;
+  -ms-justify-content: space-between center;
+  justify-content: space-between center;
+  -ms-flex-pack: space-between center;
   -webkit-flex-flow: row wrap;
   -moz-flex-flow: row wrap;
   -ms-flex-flow: row wrap;
@@ -44,7 +44,7 @@
       }
     }
     &:last-of-type{
-      margin-bottom: 10vh;
+      margin-bottom: 50px;
       .input-field{
         &.focused{
           label{
@@ -111,6 +111,7 @@
       font-weight: 900;
       &#description{
         padding-top: 15px;
+        min-height: 160px;
       }
       &#title{
         font-size: 36px;

@@ -374,34 +374,65 @@ th {
 body {
   color: white;
   margin: 0;
-  font-family: 'Circular Std' !important; }
+  font-family: 'Circular Std' !important;
+  overflow-x: hidden; }
 
-header h1 {
-  color: #000; }
-  header h1 span {
-    color: #ff4a2c; }
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 100; }
+  header .logo, header .kind-list {
+    padding: 20px 50px; }
+  header a {
+    text-decoration: none !important; }
+    header a h1 {
+      color: black;
+      font-size: 2em;
+      margin: 0; }
+      header a h1 span {
+        color: #ff4a2c; }
+  header select {
+    border: none;
+    color: black;
+    background: none;
+    font-family: 'Circular Std' !important;
+    border-bottom: 2px solid #d1d1d1;
+    text-transform: capitalize;
+    outline: none; }
+
+.navbar-default {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+body {
+  background: #f6f6f6; }
 
 .add-container {
   position: fixed;
   z-index: 1000;
   bottom: 50px;
   right: 50px; }
-  .add-container button {
+  .add-container a {
     background-color: #ff4a2c;
     border: none;
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
     border-radius: 100%;
-    padding: 30px 20px;
+    padding: 0 !important;
     cursor: pointer;
+    text-decoration: none !important;
     outline: none;
-    box-shadow: 0px 3px 10px #ff4a2c; }
-    .add-container button span {
+    display: flex;
+    align-items: center; }
+    .add-container a i {
+      font-size: 30px; }
+    .add-container a span {
       display: block;
       width: 20px;
       height: 2px;
       background: #fff; }
-      .add-container button span:after {
+      .add-container a span:after {
         content: "";
         display: block;
         width: 20px;
@@ -414,25 +445,78 @@ header h1 {
         transform: rotate(90deg); }
 
 .posts {
-  display: flex; }
+  display: -webkit-box;
+  overflow-x: auto;
+  position: absolute;
+  top: 55%;
+  left: 0;
+  transform: translate(0%, -50%); }
+  .posts::-webkit-scrollbar {
+    opacity: 0; }
+
+.post:first-child {
+  margin-left: 50px; }
+.post:last-child .post-content {
+  margin-right: 70px; }
 
 .post-content {
   text-align: center;
   width: 100%;
-  max-width: 250px; }
+  max-width: 255px;
+  position: relative;
+  margin: 0 20px;
+  cursor: pointer;
+  padding: 30px 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+  .post-content:hover {
+    max-width: 300px; }
+  .post-content:hover h3, .post-content:hover .note {
+    opacity: 1; }
+  .post-content .note {
+    color: #7c7c7c;
+    font-size: 1.2em;
+    letter-spacing: 2px;
+    opacity: 0; }
+  .post-content a {
+    width: 100%;
+    height: 100%;
+    display: block; }
+    .post-content a:hover {
+      text-decoration: none; }
   .post-content .img-container {
     width: 100%;
-    max-width: 200px;
-    height: 400px;
+    height: 460px;
     border-radius: 5px;
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    margin: auto;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out; }
     .post-content .img-container img {
-      width: 100%; }
+      width: 100%;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      box-shadow: 1px 13px 40px #6d6d6d; }
   .post-content h3 {
     padding: 30px 0 10px;
-    font-size: 2em; }
+    font-size: 2em;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+    .post-content h3 a {
+      color: #000; }
 
 .not-foundContainer {
   text-align: center;
@@ -490,7 +574,7 @@ header h1 {
       box-shadow: 0px 3px 10px #ff4a2c; }
 
 .form-groupAdd {
-  padding-top: 120px;
+  padding-top: 100px;
   max-width: 600px;
   margin: 0 auto;
   display: -webkit-box;
@@ -498,11 +582,11 @@ header h1 {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  -webkit-justify-content: space-between;
-  -moz-justify-content: space-between;
-  -ms-justify-content: space-between;
-  justify-content: space-between;
-  -ms-flex-pack: space-between;
+  -webkit-justify-content: space-between center;
+  -moz-justify-content: space-between center;
+  -ms-justify-content: space-between center;
+  justify-content: space-between center;
+  -ms-flex-pack: space-between center;
   -webkit-flex-flow: row wrap;
   -moz-flex-flow: row wrap;
   -ms-flex-flow: row wrap;
@@ -529,7 +613,7 @@ header h1 {
     .form-groupAdd .containerInput:first-of-type .input-field input {
       padding: 25px 0 10px; }
     .form-groupAdd .containerInput:last-of-type {
-      margin-bottom: 10vh; }
+      margin-bottom: 50px; }
       .form-groupAdd .containerInput:last-of-type .input-field.focused label {
         transform: translateY(-14px) scale(0.8);
         transform-origin: 0 0;
@@ -580,7 +664,8 @@ header h1 {
       box-shadow: none;
       font-weight: 900; }
       .form-groupAdd .containerInput input#description, .form-groupAdd .containerInput textarea#description {
-        padding-top: 15px; }
+        padding-top: 15px;
+        min-height: 160px; }
       .form-groupAdd .containerInput input#title, .form-groupAdd .containerInput textarea#title {
         font-size: 36px; }
       .form-groupAdd .containerInput input.filled, .form-groupAdd .containerInput textarea.filled {
@@ -643,11 +728,6 @@ header h1 {
       .form-groupAdd .picker__frame .picker__box .picker__day--selected, .form-groupAdd .picker__frame .picker__box .picker__day--selected:hover, .form-groupAdd .picker__frame .picker__box .picker--focused .picker__day--selected, .form-groupAdd .picker__frame .picker__box .picker__date-display {
         background-color: #ff4a2c; }
 
-.navbar {
-  position: absolute;
-  top: 10px;
-  left: 10px; }
-
 .container {
   max-width: inherit;
   width: 100%; }
@@ -707,6 +787,18 @@ header h1 {
         color: #7c7c7c;
         font-weight: 100;
         line-height: 30px; }
+      .container .postContainer .left .acteurs {
+        margin: 40px 0 50px; }
+        .container .postContainer .left .acteurs span {
+          border-radius: 30px;
+          border: 2px solid #e2e2e2;
+          text-transform: uppercase;
+          color: #424242;
+          font-size: 12px;
+          padding: 8px 15px;
+          margin-right: 10px; }
+          .container .postContainer .left .acteurs span:last-of-type {
+            margin-right: 0px; }
       .container .postContainer .left .button {
         margin-top: 10px; }
         .container .postContainer .left .button .trailer {
@@ -781,7 +873,7 @@ header h1 {
         opacity: 0.6; }
 
 .form-groupEdit {
-  padding-top: 120px;
+  padding-top: 100px;
   max-width: 600px;
   position: relative;
   margin: 0 auto;
@@ -815,13 +907,13 @@ header h1 {
     justify-content: space-between;
     -ms-flex-pack: space-between;
     width: 100%;
-    margin-bottom: 10px; }
+    margin-bottom: 5px; }
     .form-groupEdit .containerInput:first-of-type .input-field label {
       top: 0px; }
     .form-groupEdit .containerInput:first-of-type .input-field input {
       padding: 25px 0 10px; }
     .form-groupEdit .containerInput:last-of-type {
-      margin-bottom: 10vh; }
+      margin-bottom: 50px; }
       .form-groupEdit .containerInput:last-of-type .input-field.focused label {
         transform: translateY(-14px) scale(0.8);
         transform-origin: 0 0;
@@ -878,7 +970,10 @@ header h1 {
       box-shadow: none;
       font-weight: 900; }
       .form-groupEdit .containerInput input#description, .form-groupEdit .containerInput textarea#description {
-        padding-top: 15px; }
+        margin-top: 15px;
+        padding-top: 15px;
+        min-height: 120px;
+        overflow: scroll; }
       .form-groupEdit .containerInput input#title, .form-groupEdit .containerInput textarea#title {
         font-size: 36px; }
       .form-groupEdit .containerInput input.filled, .form-groupEdit .containerInput textarea.filled {

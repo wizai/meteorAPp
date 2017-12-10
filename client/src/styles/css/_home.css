@@ -1,43 +1,30 @@
 body {
-  background: #f6f6f6;
-}
+  background: #f6f6f6; }
 
 .add-container {
   position: fixed;
   z-index: 1000;
   bottom: 50px;
-  right: 50px;
-
-  a {
+  right: 50px; }
+  .add-container a {
     background-color: #ff4a2c;
     border: none;
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
     border-radius: 100%;
-    padding:0 !important;
+    padding: 12px 20px;
     cursor: pointer;
-    text-decoration: none !important;
     outline: none;
     display: flex;
-    align-items: center;
-    i{
-      font-size: 30px;
-    }
-    span {
+    align-items: center; }
+    .add-container a span {
       display: block;
       width: 20px;
       height: 2px;
-      background: #fff;
-
-      &:after {
+      background: #fff; }
+      .add-container a span:after {
         content: "";
         display: block;
         width: 20px;
         height: 2px;
-        background: #fff;
-
-        @include transform(rotate(90deg));
-      }
-    }
-  }
-}
+        background: #fff; }
