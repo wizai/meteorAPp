@@ -10,7 +10,7 @@ Des maquettes ont été réalisées avant le début de l’intégration.
 * Meteorjs
 * Material-UI
 
-#### Aperçu
+### Aperçu
 
 ##### Page d'accueil
 
