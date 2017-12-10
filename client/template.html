@@ -1,23 +1,9 @@
 <template name="layout">
     <div class="container">
         <header class="navbar navbar-default" role="navigation">
-            <a href="{{pathFor 'listFilm'}}" class="logo">
+            <a href="/" class="logo">
                 <h1>Movies<span>.</span></h1>
             </a>
-            <div class="kind-list">
-                <select>
-                    <option value="">action</option>
-                    <option value="">animation</option>
-                    <option value="">asiatique</option>
-                    <option value="">aventure</option>
-                    <option value="">biopic</option>
-                    <option value="">bollywood</option>
-                    <option value="">catastrophe</option>
-                    <option value="">chine</option>
-                    <option value="">classiques</option>
-                    <option value="">comedie</option>
-                </select>
-            </div>
         </header>
         <div id="main">
             {{> yield}}

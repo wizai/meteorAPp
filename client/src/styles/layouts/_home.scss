@@ -2,6 +2,23 @@ body {
   background: #f6f6f6;
 }
 
+.kind-list{
+  position: absolute;
+  top: 20px;
+  right: 70px;
+  z-index: 101;
+  input{
+    color: #1a1a1a;
+    font-weight: bold;
+    font-size: 19px !important;
+    padding-bottom: 5px !important;
+  }
+  .dropdown-content li > a, .dropdown-content li > span{
+    color: #1a1a1a;
+    font-weight: bold;
+    font-size: 19px !important;
+  }
+}
 .add-container {
   position: fixed;
   z-index: 1000;

@@ -4,13 +4,15 @@ Template.listFilm.helpers({
     }
 });
 
+Template.listFilm.rendered = function () {
+    $('select').material_select();
+}
 Template.filmPage.rendered = function () {
     var acteursList = $('.acteurs').text();
     var acteur = acteursList.split(',')
     var arrayActeur  = [];
     var newHTML = [];
     arrayActeur = arrayActeur.concat(acteur);
-    console.log(arrayActeur)
     $.each( arrayActeur, function( key, value ) {
         //alert( key + ": " + value );
         newHTML.push('<span>' + value + '</span>');

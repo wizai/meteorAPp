@@ -1,4 +1,19 @@
 <template name="listFilm">
+    <div class="kind-list">
+        <select>
+            <option value="" disabled selected>Tous les genres</option>
+            <option value="">Action</option>
+            <option value="">Animation</option>
+            <option value="">Asiatique</option>
+            <option value="">Aventure</option>
+            <option value="">Biopic</option>
+            <option value="">Bollywood</option>
+            <option value="">Catastrophe</option>
+            <option value="">Chine</option>
+            <option value="">Classiques</option>
+            <option value="">Comedie</option>
+        </select>
+    </div>
     <div class="posts">
         {{#each film}}
         {{> itemFilm}}
