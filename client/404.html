@@ -1,7 +1,11 @@
 <template name="notFound">
-    <div class="not-found page jumbotron">
-        <h2>404</h2>
-        <p>Il semblerait que vous vous êtes perdu...</p>
-        <a class="mui-btn mui-btn--primary mui-btn--raised" href="{{pathFor 'listFilm'}}">Revenir à l'accueil</a>
+    <div class="not-foundContainer">
+        <div class="not-found page jumbotron">
+            <h2>404</h2>
+            <p>Il semblerait que vous vous êtes perdu...</p>
+            <div>
+                <a href="{{pathFor 'listFilm'}}">Revenir à l'accueil</a>
+            </div>
+        </div>
     </div>
 </template>

@@ -23,3 +23,4 @@ check
 ostrio:files
 ostrio:templatehelpers
 autopublish
+materialize:materialize

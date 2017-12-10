@@ -1,64 +1,77 @@
-/*
-Error: Undefined mixin 'flexbox'.
-        on line 4 of /Users/williamnisole/Desktop/hetic/meteorFilm/meteorApp/client/src/styles/layouts/_addFilm.scss, in `flexbox'
-        from line 4 of /Users/williamnisole/Desktop/hetic/meteorFilm/meteorApp/client/src/styles/layouts/_addFilm.scss
-
-1: .form-groupAdd{
-2:   max-width: 600px;
-3:   margin:0 auto;
-4:   @include flexbox();
-5:   @include justify-content(flex-start);
-6:   @include flex-flow(row wrap);
-7:   @include align-items(center);
-8:   .containerInput{
-9:     display: block;
-
-Backtrace:
-/Users/williamnisole/Desktop/hetic/meteorFilm/meteorApp/client/src/styles/layouts/_addFilm.scss:4:in `flexbox'
-/Users/williamnisole/Desktop/hetic/meteorFilm/meteorApp/client/src/styles/layouts/_addFilm.scss:4
-/var/folders/9q/7zj06nf56l75b1wl0hcg6wl40000gn/T/AppTranslocation/9AAC8C51-CA54-4733-ACF6-2344B6700AC1/d/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:349:in `block in visit_mixin'
-/var/folders/9q/7zj06nf56l75b1wl0hcg6wl40000gn/T/AppTranslocation/9AAC8C51-CA54-4733-ACF6-2344B6700AC1/d/CodeKit.app/Contents/Resources/engines/scss/lib/sass/stack.rb:98:in `block in with_mixin'
-/var/folders/9q/7zj06nf56l75b1wl0hcg6wl40000gn/T/AppTranslocation/9AAC8C51-CA54-4733-ACF6-2344B6700AC1/d/CodeKit.app/Contents/Resources/engines/scss/lib/sass/stack.rb:115:in `with_frame'
-/var/folders/9q/7zj06nf56l75b1wl0hcg6wl40000gn/T/AppTranslocation/9AAC8C51-CA54-4733-ACF6-2344B6700AC1/d/CodeKit.app/Contents/Resources/engines/scss/lib/sass/stack.rb:98:in `with_mixin'
-/var/folders/9q/7zj06nf56l75b1wl0hcg6wl40000gn/T/AppTranslocation/9AAC8C51-CA54-4733-ACF6-2344B6700AC1/d/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:347:in `visit_mixin'
-/var/folders/9q/7zj06nf56l75b1wl0hcg6wl40000gn/T/AppTranslocation/9AAC8C51-CA54-4733-ACF6-2344B6700AC1/d/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:36:in `visit'
-/var/folders/9q/7zj06nf56l75b1wl0hcg6wl40000gn/T/AppTranslocation/9AAC8C51-CA54-4733-ACF6-2344B6700AC1/d/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/var/folders/9q/7zj06nf56l75b1wl0hcg6wl40000gn/T/AppTranslocation/9AAC8C51-CA54-4733-ACF6-2344B6700AC1/d/CodeKit.app/Contents/Resources/engines/scss/lib/sass/stack.rb:79:in `block in with_base'
-/var/folders/9q/7zj06nf56l75b1wl0hcg6wl40000gn/T/AppTranslocation/9AAC8C51-CA54-4733-ACF6-2344B6700AC1/d/CodeKit.app/Contents/Resources/engines/scss/lib/sass/stack.rb:115:in `with_frame'
-/var/folders/9q/7zj06nf56l75b1wl0hcg6wl40000gn/T/AppTranslocation/9AAC8C51-CA54-4733-ACF6-2344B6700AC1/d/CodeKit.app/Contents/Resources/engines/scss/lib/sass/stack.rb:79:in `with_base'
-/var/folders/9q/7zj06nf56l75b1wl0hcg6wl40000gn/T/AppTranslocation/9AAC8C51-CA54-4733-ACF6-2344B6700AC1/d/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/var/folders/9q/7zj06nf56l75b1wl0hcg6wl40000gn/T/AppTranslocation/9AAC8C51-CA54-4733-ACF6-2344B6700AC1/d/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:431:in `block (2 levels) in visit_rule'
-/var/folders/9q/7zj06nf56l75b1wl0hcg6wl40000gn/T/AppTranslocation/9AAC8C51-CA54-4733-ACF6-2344B6700AC1/d/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:431:in `map'
-/var/folders/9q/7zj06nf56l75b1wl0hcg6wl40000gn/T/AppTranslocation/9AAC8C51-CA54-4733-ACF6-2344B6700AC1/d/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:431:in `block in visit_rule'
-/var/folders/9q/7zj06nf56l75b1wl0hcg6wl40000gn/T/AppTranslocation/9AAC8C51-CA54-4733-ACF6-2344B6700AC1/d/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/var/folders/9q/7zj06nf56l75b1wl0hcg6wl40000gn/T/AppTranslocation/9AAC8C51-CA54-4733-ACF6-2344B6700AC1/d/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:429:in `visit_rule'
-/var/folders/9q/7zj06nf56l75b1wl0hcg6wl40000gn/T/AppTranslocation/9AAC8C51-CA54-4733-ACF6-2344B6700AC1/d/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:36:in `visit'
-/var/folders/9q/7zj06nf56l75b1wl0hcg6wl40000gn/T/AppTranslocation/9AAC8C51-CA54-4733-ACF6-2344B6700AC1/d/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/var/folders/9q/7zj06nf56l75b1wl0hcg6wl40000gn/T/AppTranslocation/9AAC8C51-CA54-4733-ACF6-2344B6700AC1/d/CodeKit.app/Contents/Resources/engines/scss/lib/sass/stack.rb:79:in `block in with_base'
-/var/folders/9q/7zj06nf56l75b1wl0hcg6wl40000gn/T/AppTranslocation/9AAC8C51-CA54-4733-ACF6-2344B6700AC1/d/CodeKit.app/Contents/Resources/engines/scss/lib/sass/stack.rb:115:in `with_frame'
-/var/folders/9q/7zj06nf56l75b1wl0hcg6wl40000gn/T/AppTranslocation/9AAC8C51-CA54-4733-ACF6-2344B6700AC1/d/CodeKit.app/Contents/Resources/engines/scss/lib/sass/stack.rb:79:in `with_base'
-/var/folders/9q/7zj06nf56l75b1wl0hcg6wl40000gn/T/AppTranslocation/9AAC8C51-CA54-4733-ACF6-2344B6700AC1/d/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/var/folders/9q/7zj06nf56l75b1wl0hcg6wl40000gn/T/AppTranslocation/9AAC8C51-CA54-4733-ACF6-2344B6700AC1/d/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/var/folders/9q/7zj06nf56l75b1wl0hcg6wl40000gn/T/AppTranslocation/9AAC8C51-CA54-4733-ACF6-2344B6700AC1/d/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:52:in `map'
-/var/folders/9q/7zj06nf56l75b1wl0hcg6wl40000gn/T/AppTranslocation/9AAC8C51-CA54-4733-ACF6-2344B6700AC1/d/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/var/folders/9q/7zj06nf56l75b1wl0hcg6wl40000gn/T/AppTranslocation/9AAC8C51-CA54-4733-ACF6-2344B6700AC1/d/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-/var/folders/9q/7zj06nf56l75b1wl0hcg6wl40000gn/T/AppTranslocation/9AAC8C51-CA54-4733-ACF6-2344B6700AC1/d/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/var/folders/9q/7zj06nf56l75b1wl0hcg6wl40000gn/T/AppTranslocation/9AAC8C51-CA54-4733-ACF6-2344B6700AC1/d/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-/var/folders/9q/7zj06nf56l75b1wl0hcg6wl40000gn/T/AppTranslocation/9AAC8C51-CA54-4733-ACF6-2344B6700AC1/d/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/var/folders/9q/7zj06nf56l75b1wl0hcg6wl40000gn/T/AppTranslocation/9AAC8C51-CA54-4733-ACF6-2344B6700AC1/d/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-/var/folders/9q/7zj06nf56l75b1wl0hcg6wl40000gn/T/AppTranslocation/9AAC8C51-CA54-4733-ACF6-2344B6700AC1/d/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:36:in `visit'
-/var/folders/9q/7zj06nf56l75b1wl0hcg6wl40000gn/T/AppTranslocation/9AAC8C51-CA54-4733-ACF6-2344B6700AC1/d/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:157:in `visit'
-/var/folders/9q/7zj06nf56l75b1wl0hcg6wl40000gn/T/AppTranslocation/9AAC8C51-CA54-4733-ACF6-2344B6700AC1/d/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:8:in `visit'
-/var/folders/9q/7zj06nf56l75b1wl0hcg6wl40000gn/T/AppTranslocation/9AAC8C51-CA54-4733-ACF6-2344B6700AC1/d/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/root_node.rb:36:in `css_tree'
-/var/folders/9q/7zj06nf56l75b1wl0hcg6wl40000gn/T/AppTranslocation/9AAC8C51-CA54-4733-ACF6-2344B6700AC1/d/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/root_node.rb:20:in `render'
-/var/folders/9q/7zj06nf56l75b1wl0hcg6wl40000gn/T/AppTranslocation/9AAC8C51-CA54-4733-ACF6-2344B6700AC1/d/CodeKit.app/Contents/Resources/engines/scss/lib/sass/engine.rb:278:in `render'
-/var/folders/9q/7zj06nf56l75b1wl0hcg6wl40000gn/T/AppTranslocation/9AAC8C51-CA54-4733-ACF6-2344B6700AC1/d/CodeKit.app/Contents/Resources/engines/scss/lib/sass/exec/sass_scss.rb:423:in `run'
-/var/folders/9q/7zj06nf56l75b1wl0hcg6wl40000gn/T/AppTranslocation/9AAC8C51-CA54-4733-ACF6-2344B6700AC1/d/CodeKit.app/Contents/Resources/engines/scss/lib/sass/exec/sass_scss.rb:63:in `process_result'
-/var/folders/9q/7zj06nf56l75b1wl0hcg6wl40000gn/T/AppTranslocation/9AAC8C51-CA54-4733-ACF6-2344B6700AC1/d/CodeKit.app/Contents/Resources/engines/scss/lib/sass/exec/base.rb:52:in `parse'
-/var/folders/9q/7zj06nf56l75b1wl0hcg6wl40000gn/T/AppTranslocation/9AAC8C51-CA54-4733-ACF6-2344B6700AC1/d/CodeKit.app/Contents/Resources/engines/scss/lib/sass/exec/base.rb:19:in `parse!'
-/var/folders/9q/7zj06nf56l75b1wl0hcg6wl40000gn/T/AppTranslocation/9AAC8C51-CA54-4733-ACF6-2344B6700AC1/d/CodeKit.app/Contents/Resources/engines/scss/bin/scss:13:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Undefined mixin 'flexbox'.\A         on line 4 of /Users/williamnisole/Desktop/hetic/meteorFilm/meteorApp/client/src/styles/layouts/_addFilm.scss, in `flexbox'\A         from line 4 of /Users/williamnisole/Desktop/hetic/meteorFilm/meteorApp/client/src/styles/layouts/_addFilm.scss\A \A 1: .form-groupAdd{\A 2:   max-width: 600px;\A 3:   margin:0 auto;\A 4:   @include flexbox();\A 5:   @include justify-content(flex-start);\A 6:   @include flex-flow(row wrap);\A 7:   @include align-items(center);\A 8:   .containerInput{\A 9:     display: block;"; }
+.form-groupAdd {
+  max-width: 600px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: space-between;
+  -webkit-flex-flow: row wrap;
+  -moz-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center; }
+  .form-groupAdd .containerInput {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+    -ms-flex-pack: space-between;
+    width: 100%;
+    margin-bottom: 30px; }
+    .form-groupAdd .containerInput .groupInput {
+      position: relative;
+      width: 100%; }
+      .form-groupAdd .containerInput .groupInput + .form-group {
+        margin-top: 30px; }
+      .form-groupAdd .containerInput .groupInput.focused label {
+        transform: translateY(-125%);
+        font-size: .75em; }
+      .form-groupAdd .containerInput .groupInput.focused label[for=title] {
+        font-size: 1.5em; }
+    .form-groupAdd .containerInput .doubleInput {
+      width: 45%; }
+    .form-groupAdd .containerInput label {
+      position: absolute;
+      left: 0;
+      font-size: 20px;
+      top: 10px;
+      color: #d1d1d1 !important;
+      z-index: 10;
+      font-weight: 900;
+      transition: transform 150ms ease-out, font-size 150ms ease-out; }
+    .form-groupAdd .containerInput label[for=title] {
+      font-size: 36px; }
+    .form-groupAdd .containerInput input {
+      border: 0px;
+      border-bottom: 3px solid #c7c7c7;
+      font-size: 20px;
+      position: relative;
+      padding: 12px 0px 5px 0;
+      width: 100%;
+      outline: 0;
+      color: #d1d1d1;
+      transition: border 150ms ease-out;
+      box-shadow: none;
+      font-weight: 900; }
+      .form-groupAdd .containerInput input#title {
+        font-size: 36px; }
+      .form-groupAdd .containerInput input:focus {
+        border-bottom: 3px solid #ff4a2c;
+        box-shadow: none; }
+      .form-groupAdd .containerInput input.filled {
+        border-bottom: 3px solid #c7c7c7;
+        box-shadow: none; }

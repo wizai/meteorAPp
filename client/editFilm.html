@@ -1,29 +1,84 @@
 <template name="filmEdit">
     <form class="main form page">
-        <div class="form-group">
-            <label class="control-label" for="url">URL</label>
-            <div class="controls">
-                <input name="url" id="url" type="text" value="{{url}}" placeholder="Votre URL" class="form-control"/>
+        <div class="form-groupEdit">
+            <div class="containerInput">
+                <div class="input-field">
+                    <label class="control-label actived" for="title" >Titre du film</label>
+                    <input name="title" id="title" type="text" value="{{title}}"/>
+                </div>
             </div>
-        </div>
-        <input type="file" name="image" id="image" placeholder="Ajouter une image">
-        <div class="form-group">
-            <label class="control-label" for="title">Title</label>
-            <div class="controls">
-                <input name="title" id="title" type="text" value="{{title}}" placeholder="Nommez votre post" class="form-control"/>
+            <div class="containerInput">
+                <div class="doubleInput">
+                    <div class="input-field">
+                        <label for="date">Date</label>
+                        <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" name="date" id="date"  class="datepicker">
+                    </div>
+                </div>
+                <div class="doubleInput">
+                    <div class="input-field">
+                        <label for="note" class="actived">Note / 10</label>
+                        <input type="number" name="note" id="note" max="10" min="0" maxlength="2" value="{{note}}">
+                    </div>
+                </div>
             </div>
+            <div class="containerInput">
+                <div class="doubleInput">
+                    <div class="input-field">
+                        <select name="genre" id="genre">
+                            <option value="Catégorie" disabled selected>Catégorie</option>
+                            <option value="Action">Action</option>
+                            <option value="Aventure">Aventure</option>
+                            <option value="Comédie">Comédie</option>
+                            <option value="Science fiction">Science fiction</option>
+                            <option value="Thriller">Thriller</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="doubleInput">
+                    <div class="input-field">
+                        <label for="couleur" class="actived">Couleur</label>
+                        <input type="text" name="couleur" id="couleur" value="{{couleur}}">
+                    </div>
+                </div>
+            </div>
+            <div class="containerInput">
+                <div class="input-field">
+                    <label for="acteurs">Acteurs</label>
+                    <input type="text" name="acteurs" id="acteurs" value="">
+                </div>
+            </div>
+            <div class="containerInput">
+                <div class="input-field">
+                    <label for="description" class="actived">Description</label>
+                    <textarea name="description" id="description" cols="30" rows="5"  class="materialize-textarea">{{description}}</textarea>
+                </div>
+            </div>
+            <div class="containerInput">
+                <div class="input-field">
+                    <label for="url" class="actived">Lien du trailer</label>
+                    <input name="url" id="url" type="text" value="{{url}}"/>
+                </div>
+            </div>
+            <div class="containerInput">
+                <div class="input-field">
+                    {{#with currentUpload}}
+                    Uploading <b>{{file.name}}</b>:
+                    <span id="progress">{{progress.get}}%</span>
+                    {{else}}
+                    <label for="fileInput">Image</label>
+                    <input id="fileInput" type="file" value=""/>
+                    {{#if uploadedImage}}
+                    <img src="{{uploadedImage._downloadRoute}}/{{uploadedImage._collectionName}}/{{uploadedImage._id}}/original/{{uploadedImage._id}}{{uploadedImage.extensionWithDot}}" alt="">
+                    <p class="fileName">{{uploadedImage.name}}</p>
+                    {{/if}}
+                    {{/with}}
+                </div>
+            </div>
+            <input type="submit" value="Enregistrer"/>
+            <a class="delete" href="#">Supprimer</a>
         </div>
-        <input type="submit" value="Submit" class="btn btn-primary submit"/>
-
-        <label for="genre">genre</label>
-        <input type="text" name="genre" id="genre">
-        <label for="description">description</label>
-        <textarea name="description" id="description" cols="30" rows="10"></textarea>
-        <label for="acteurs">acteurs</label>
-        <input type="text" name="acteurs" id="acteurs">
-        <label for="note">Note</label>
-        <input type="number" name="note" id="note">
-        <hr>
-        <a class="btn btn-danger delete" href="#">Supprimer le post</a>
+        <a href="{{pathFor 'listFilm'}}" class="close">
+            <p>✕</p>
+        </a>
     </form>
 </template>

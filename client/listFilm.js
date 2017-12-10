@@ -3,11 +3,33 @@ Template.listFilm.helpers({
         return film.find();
     }
 });
+Template.filmSubmit.rendered = function () {
+    $('select').material_select();
+    $('.datepicker').pickadate({
+        selectMonths: true, // Creates a dropdown to control month
+        selectYears: 15, // Creates a dropdown of 15 years to control year,
+        labelMonthNext: 'Mois suivant',
+        labelMonthPrev: 'Mois précédent',
+        labelMonthSelect: 'Selectionner le mois',
+        labelYearSelect: 'Selectionner une année',
+        monthsFull: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
+        monthsShort: ['Jan', 'Fev', 'Mar', 'Avr', 'Mai', 'Jun', 'Jul', 'Aou', 'Sep', 'Oct', 'Nov', 'Dec'],
+        weekdaysFull: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'],
+        weekdaysShort: ['Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam'],
+        weekdaysLetter: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S'],
+        today: 'Aujourd\'hui',
+        clear: 'Réinitialiser',
+        close: 'Fermer',
+        format: 'dd/mm/yyyy',
+        closeOnSelect: true
+    });
+};
+
+
 
 Template.filmSubmit.events({
     'submit form': function(e) {
         e.preventDefault();
-
         var film = {
             url: $(e.target).find('[name=url]').val(),
             title: $(e.target).find('[name=title]').val(),
@@ -16,8 +38,10 @@ Template.filmSubmit.events({
             description: $(e.target).find('[name=description]').val(),
             acteurs: $(e.target).find('[name=acteurs]').val(),
             couleur: $(e.target).find('[name=couleur]').val(),
+            date : $(e.target).find('[name=date]').val(),
             image: $(e.target).find('img').attr('src')
         };
+        console.log(film);
 
         Meteor.call('postInsert', film, function(error, result) {
             // affiche l'erreur à l'utilisateur et s'interrompt
@@ -26,36 +50,11 @@ Template.filmSubmit.events({
             Router.go('listFilm', {_id: result._id});
         });
     },
-    'focus input' : function(event){
-        $(event.target).parents('.groupInput').addClass('focused');
-    },
-    'blur input' : function (event) {
-        var inputValue = $(event.target).val();
-        if (inputValue === "") {
-            $(event.target).removeClass('filled');
-            $(event.target).parents('.groupInput').removeClass('focused');
-        } else {
-            $(event.target).addClass('filled');
-        }
+    'focus #fileInput' :function (e) {
+        $(e.target).parents('.input-field').addClass('focused');
     }
 });
 
-if (Meteor.isClient){
-    $(function () {
-        $('.form-groupAdd input').focus(function () {
-            $(this).parents('.groupInput').addClass('focused');
-        });
-        $('.form-groupAdd input').blur(function () {
-            var inputValue = $(this).val();
-            if (inputValue === "") {
-                $(this).removeClass('filled');
-                $(this).parents('.groupInput').removeClass('focused');
-            } else {
-                $(this).addClass('filled');
-            }
-        })
-    })
-}
 
 Template.filmEdit.events({
     'submit form': function(e) {
@@ -88,6 +87,28 @@ Template.filmEdit.events({
         }
     }
 });
+
+Template.filmEdit.rendered = function () {
+    $('select').material_select();
+    $('.datepicker').pickadate({
+        selectMonths: true, // Creates a dropdown to control month
+        selectYears: 15, // Creates a dropdown of 15 years to control year,
+        labelMonthNext: 'Mois suivant',
+        labelMonthPrev: 'Mois précédent',
+        labelMonthSelect: 'Selectionner le mois',
+        labelYearSelect: 'Selectionner une année',
+        monthsFull: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
+        monthsShort: ['Jan', 'Fev', 'Mar', 'Avr', 'Mai', 'Jun', 'Jul', 'Aou', 'Sep', 'Oct', 'Nov', 'Dec'],
+        weekdaysFull: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'],
+        weekdaysShort: ['Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam'],
+        weekdaysLetter: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S'],
+        today: 'Aujourd\'hui',
+        clear: 'Réinitialiser',
+        close: 'Fermer',
+        format: 'dd/mm/yyyy',
+        closeOnSelect: true
+    });
+};
 
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
@@ -138,6 +159,7 @@ Template.filmSubmit.events({
                     if (error) {
                         window.alert('Error during upload: ' + error.reason);
                     } else {
+                        console.log(template.uploadedImage)
                         template.uploadedImage.set(fileObj);
                     }
                     template.currentUpload.set(false);
@@ -147,3 +169,4 @@ Template.filmSubmit.events({
         }
     }
 });
+

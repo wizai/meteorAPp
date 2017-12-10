@@ -2,75 +2,79 @@
     <form class="main form page">
         <div class="form-groupAdd">
             <div class="containerInput">
-                <div class="groupInput">
-                    <label class="control-label" for="title">Title</label>
+                <div class="input-field">
+                    <label class="control-label" for="title">Titre du film</label>
                     <input name="title" id="title" type="text" value=""/>
                 </div>
             </div>
             <div class="containerInput">
                 <div class="doubleInput">
-                    <div class="groupInput">
+                    <div class="input-field">
                         <label for="date">Date</label>
-                        <input type="date" id="date" value="">
+                        <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" name="date" id="date"  class="datepicker">
                     </div>
                 </div>
                 <div class="doubleInput">
-                    <div class="groupInput">
+                    <div class="input-field">
                         <label for="note">Note / 10</label>
-                        <input type="number" name="note" id="note" max="10" min="0" value="" >
+                        <input type="number" name="note" id="note" max="10" min="0" maxlength="2" value="">
                     </div>
                 </div>
             </div>
             <div class="containerInput">
                 <div class="doubleInput">
-                    <div class="groupInput">
-                        <label for="genre">Categorie</label>
-                        <input type="text" name="genre" id="genre" value="" >
+                    <div class="input-field">
+                        <select name="genre" id="genre">
+                            <option value="Catégorie" disabled selected>Catégorie</option>
+                            <option value="Action">Action</option>
+                            <option value="Aventure">Aventure</option>
+                            <option value="Comédie">Comédie</option>
+                            <option value="Science fiction">Science fiction</option>
+                            <option value="Thriller">Thriller</option>
+                        </select>
                     </div>
                 </div>
                 <div class="doubleInput">
-                    <div class="groupInput">
+                    <div class="input-field">
                         <label for="couleur">Couleur</label>
                         <input type="text" name="couleur" id="couleur" value="">
                     </div>
                 </div>
             </div>
             <div class="containerInput">
-                <div class="groupInput">
+                <div class="input-field">
                     <label for="acteurs">Acteurs</label>
-                    <input type="text" name="acteurs" id="acteurs" value="" >
+                    <input type="text" name="acteurs" id="acteurs" value="">
                 </div>
             </div>
             <div class="containerInput">
-                <div class="groupInput">
+                <div class="input-field">
                     <label for="description">Description</label>
-                    <textarea name="description" id="description" cols="30" rows="10" ></textarea>
+                    <textarea name="description" id="description" cols="30" rows="3"  class="materialize-textarea"></textarea>
                 </div>
             </div>
             <div class="containerInput">
-                <div class="groupInput">
+                <div class="input-field">
                     <label for="url">Lien du trailer</label>
-                    <input name="url" id="url" type="text" value=""  class="form-control"/>
+                    <input name="url" id="url" type="text" value=""/>
                 </div>
             </div>
             <div class="containerInput">
-                <div class="groupInput">
+                <div class="input-field">
                     {{#with currentUpload}}
                         Uploading <b>{{file.name}}</b>:
                         <span id="progress">{{progress.get}}%</span>
                         {{else}}
                         <label for="fileInput">Image</label>
-                        <input id="fileInput" type="file" value="" />
+                        <input id="fileInput" type="file" value=""/>
+                        {{#if uploadedImage}}
+                            <img src="{{uploadedImage._downloadRoute}}/{{uploadedImage._collectionName}}/{{uploadedImage._id}}/original/{{uploadedImage._id}}{{uploadedImage.extensionWithDot}}" alt="">
+                            <p class="fileName">{{uploadedImage.name}}</p>
+                        {{/if}}
                     {{/with}}
-
-                    {{#if uploadedImage}}
-                        <img src="{{uploadedImage._downloadRoute}}/{{uploadedImage._collectionName}}/{{uploadedImage._id}}/original/{{uploadedImage._id}}{{uploadedImage.extensionWithDot}}" alt="">
-                    {{else}}
-                        <div>No files uploaded, yet</div>
-                    {{/if}}
                 </div>
             </div>
-        <input type="submit" value="Submit" class="btn btn-primary"/>
+        <input type="submit" value="Enregistrer"/>
         </div>
     </form>
 </template>

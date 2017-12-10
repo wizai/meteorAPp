@@ -1,5 +1,32 @@
 <template name="filmPage">
     <div class="post-page page">
-        {{> itemFilm}}
+        <div class="postContainer">
+            <div class="left">
+                <div class="content">
+                    <p class="date">{{date}}</p>
+                    <h1>{{title}}</h1>
+                    <p class="note"><span>{{note}}/10</span></p>
+                    <div class="categories">
+                        <p></p>
+                    </div>
+                    <p class="description">{{description}}</p>
+                    <div class="acteurs">
+
+                    </div>
+                    <div class="button">
+                        <a href="{{url}}" class="trailer">Regarder le trailer</a>
+                        <a class="btn-floating btn-large red edit" href="{{pathFor 'filmEdit'}}">
+                            <i class="large material-icons">mode_edit</i>
+                        </a>
+                    </div>
+                </div>
+                <div class="afficheFilm">
+                    <img src="{{image}}" alt="">
+                </div>
+            </div>
+            <div class="right"  style="background: url('{{image}}')">
+                <div style='background: #{{couleur}}'></div>
+            </div>
+        </div>
     </div>
 </template>
