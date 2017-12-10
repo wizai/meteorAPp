@@ -80,7 +80,7 @@
 		},
 	"\/client\/dist\/styles\/styles.css": {
 		"fileType": 16,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/client\/dist\/styles\/styles.css",
 		"outputAbbreviatedPath": "No Output Path",
@@ -568,11 +568,11 @@
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 0,
-		"ignoreWasSetByUser": 1,
+		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/client\/src\/styles\/styles.scss",
-		"outputAbbreviatedPath": "\/client\/dist\/styles\/styles.css",
+		"outputAbbreviatedPath": "\/client\/src\/css\/styles.css",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 1,
+		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
 		"shouldRunBless": 0,
@@ -586,6 +586,17 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
+		},
+	"\/Create_Edit_films.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 72423,
+		"inputAbbreviatedPath": "\/Create_Edit_films.jpg",
+		"outputAbbreviatedPath": "\/Create_Edit_films.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
 		},
 	"\/lib\/film.js": {
 		"fileType": 64,
@@ -609,6 +620,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/Listing films.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.10224e+06,
+		"inputAbbreviatedPath": "\/Listing films.png",
+		"outputAbbreviatedPath": "\/Listing films.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/package-lock.json": {
 		"fileType": 524288,
 		"ignore": 1,
@@ -630,6 +652,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1
+		},
+	"\/Page film.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 476798,
+		"inputAbbreviatedPath": "\/Page film.png",
+		"outputAbbreviatedPath": "\/Page film.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
 		},
 	"\/public\/images\/AGhostStory.png": {
 		"fileType": 32768,
@@ -686,6 +719,36 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/readme.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/readme.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/readme.md": {
+		"criticStyle": 0,
+		"enableFootnotes": 1,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
+		"fileType": 4096,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
+		"inputAbbreviatedPath": "\/readme.md",
+		"maskEmailAddresses": 1,
+		"outputAbbreviatedPath": "\/readme.html",
+		"outputFormat": 0,
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
+		},
 	"\/server\/main.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -700,7 +763,7 @@
 	},
 "hooks": [
 	],
-"lastSavedByUser": "william nisole",
+"lastSavedByUser": "Elvinn Tombert",
 "manualImportLinks": {
 	},
 "projectAttributes": {
