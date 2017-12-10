@@ -23,3 +23,9 @@ Des maquettes ont été réalisées avant le début de l’intégration.
 ##### Ajouter/Modifier un film
 
 ![Create_Edit_films](Create_Edit_films.jpg)
+
+
+### Collaborateurs
+* William Nisole (Développeur Front-End): https://github.com/wizai
+* Elvinn Tombert (Développeur Front-End): https://github.com/etombert
+* Hervé Rabenarisoa (Designer) : www.rbna.fr/
