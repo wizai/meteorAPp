@@ -10,4 +10,13 @@ Des maquettes ont été réalisées avant le début de l’intégration.
 * Meteorjs
 * Material-UI
 
+####Aperçu
+
+#####Page d'accueil
+![Listing_films](Listing_films.png)
+
+#####Affiche du film
+![Page_film](Page_film.png)
+
+#####Ajouter/Modifier un film
 ![Create_Edit_films](Create_Edit_films.jpg)

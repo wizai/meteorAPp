@@ -620,13 +620,13 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/Listing films.png": {
+	"\/Listing_films.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 1.10224e+06,
-		"inputAbbreviatedPath": "\/Listing films.png",
-		"outputAbbreviatedPath": "\/Listing films.png",
+		"inputAbbreviatedPath": "\/Listing_films.png",
+		"outputAbbreviatedPath": "\/Listing_films.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -653,13 +653,13 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1
 		},
-	"\/Page film.png": {
+	"\/Page_film.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 476798,
-		"inputAbbreviatedPath": "\/Page film.png",
-		"outputAbbreviatedPath": "\/Page film.png",
+		"inputAbbreviatedPath": "\/Page_film.png",
+		"outputAbbreviatedPath": "\/Page_film.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
